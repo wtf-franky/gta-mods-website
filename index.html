@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Santos Boost | Serviços GTA V Enhanced</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/pricedown" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="smooth-wrapper">
+    <div id="smooth-content">
+        <div class="money-rain" id="money-rain"></div>
+
+    <nav class="navbar">
+        <div class="logo">LS <span class="accent">BOOST</span></div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Início</a></li>
+            <li><a href="#products">Serviços</a></li>
+            <li><a href="#testimonials">Feedback</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a href="#products" class="cta-btn-nav">Começar Agora</a>
+    </nav>
+
+<section id="home" class="hero-section">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-content fade-in-up" data-speed="0.8">
+        <h1 data-speed="0.8">Domine <span class="text-gradient">Los Santos</span></h1><br>
+        <p>Serviços de Modding Profissional para GTA V Online Enhanced PC. Dinheiro, RP, Stats no máximo e conteúdos exclusivos com segurança total.</p><br>
+        <div class="hero-stats">
+            <div class="stat">
+                <h3 data-speed="1" id="monthly-counter">17</h3>
+                <span data-speed="1">Contas Este Mês</span>
+            </div>
+            <div class="stat">
+                <h3 data-speed="1">Segurança</h3>
+                <span data-speed="1">Anti-Ban System</span>
+            </div>
+            <div class="stat">
+                <h3 data-speed="1">24/7</h3>
+                <span data-speed="1">Suporte</span>
+            </div>
+        </div>
+        <div class="hero-btns">
+            <a data-speed="1" href="#products" class="cta-btn-main">Ver Pacotes</a>
+            <a data-speed="1" href="#testimonials" class="btn-secondary">Ver Provas</a>
+        </div>
+    </div>
+    <div class="hero-visual fade-in-up delay-200" data-speed="1.2">
+        <div class="floating-card">
+            <img data-speed="1" src="/images/website-images/money.jpg" alt="GTA V Money" class="hero-img">
+        </div>
+    </div>
+</section>
+
+    <section id="products" class="products-section">
+        <div class="section-header">
+            <h2 data-speed="1.1">Nossos Pacotes</h2>
+            <p data-speed="1.1">Escolha o nível de poder que deseja.</p>
+        </div>
+
+        <div class="products-grid">
+            <div class="product-card" onclick="openProduct('starter')" data-speed="1.1">
+                <div class="card-header">
+                    <h3>Starter Pack</h3>
+                    <p class="price">10€</p>
+                </div>
+                <ul class="features">
+                    <li>10 Milhões GTA$</li>
+                    <li>Nível 120 (RP)</li>
+                    <li>Stats Máximos</li>
+                    <br><br><br>
+                </ul>
+                <button class="btn-outline">Ver Detalhes</button>
+            </div>
+
+            <div class="product-card highlight" onclick="openProduct('kingpin')" data-speed="1.1">
+                <div class="badge">Mais Vendido</div>
+                <div class="card-header">
+                    <h3>Kingpin Pack</h3>
+                    <p class="price">40€</p>
+                </div>
+                <ul class="features">
+                    <li>50 Milhões GTA$</li>
+                    <li>Nível à escolha</li>
+                    <li>Unlock All (Roupas/Tattoos)</li>
+                    <li>Stats Máximos</li>
+                    <li>10 Carros Mod</li>
+                    <li>10 Trajes Mod</li>
+                </ul>
+                <button class="btn-filled">Ver Detalhes</button>
+            </div>
+
+            <div class="product-card" onclick="openProduct('cars')" data-speed="1.1">
+                <div class="card-header">
+                    <h3>Modded Garage</h3>
+                    <p class="price">25€</p>
+                </div>
+                <ul class="features">
+                    <li>10 Carros Modded</li>
+                    <li>Placas Personalizadas</li>
+                    <li>Cores e Rodas F1/Benny's</li>
+                    <br><br><br>
+                </ul>
+                <button class="btn-outline">Ver Detalhes</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+        <div class="section-header">
+            <h2 data-speed="1.1">Feedback da Comunidade</h2>
+            <p data-speed="1.2">Prints reais de clientes satisfeitos.</p>
+        </div>
+
+        <div class="proof-grid">
+            
+            <div data-speed="1.1" class="proof-card">
+                <div class="proof-header">
+                    <div class="user-info">
+                        <h4>D4rkSlayer-_-</h4>
+                        <span class="pack-badge">Starter Pack</span>
+                    </div>
+                    <div class="proof-stars">★★★★★</div>
+                </div>
+                <div class="proof-img-container">
+                    <img src="/images/testimonials/10M-print.png" alt="Print do jogo" class="proof-img" onclick="openImage(this.src)">
+                </div>
+                <p class="proof-comment">"Topp, tinha apenas 100k na conta e ele entregou os 10M em menos de 20 minutos e por apenas 10€ vale bem apena. Também fiquei com as stats do personagem no máximo e ainda recebi alguns trajes mod porque eu já estava nível 134."</p>
+            </div>
+
+            <div data-speed="1.1" class="proof-card">
+                <div class="proof-header">
+                    <div class="user-info">
+                        <h4>João_M.</h4>
+                        <span class="pack-badge">Modded Garage</span>
+                    </div>
+                    <div class="proof-stars">★★★★★</div>
+                </div>
+                <div class="proof-img-container">
+                    <img src="/images/testimonials/carros-mod.png" alt="Print do jogo" class="proof-img" onclick="openImage(this.src)">
+                </div>
+                <p class="proof-comment">"Só queria uns carro mod e ele entregou tudo direitinho em 30 minutos, recebi 10 carros mod e um brinde de 20 níveis para chegar a nível 120, muito obrigado!!😁"</p>
+            </div>
+
+            <div data-speed="1" class="proof-card">
+                <div class="proof-header">
+                    <div class="user-info">
+                        <h4>Ricard0_99</h4>
+                        <span class="pack-badge">Kingpin Pack</span>
+                    </div>
+                    <div class="proof-stars">★★★★★</div>
+                </div>
+                <div class="proof-img-container">
+                    <img src="/images/testimonials/stats-print.png" alt="Print do jogo" class="proof-img" onclick="openImage(this.src)">
+                </div>
+                <p class="proof-comment">"Escolhi um nível baixo para ser seguro, as stats ficaram no máximo e ainda aumentou o meu K/D como brinde, aconselho muito e ele é bem rápido!"</p>
+            </div>
+
+            <div data-speed="1" class="proof-card">
+                <div class="proof-header">
+                    <div class="user-info">
+                        <h4>GhostRider</h4>
+                        <span class="pack-badge">Kingpin Pack</span>
+                    </div>
+                    <div class="proof-stars">★★★★★</div>
+                </div>
+                <div class="proof-img-container">
+                    <img src="/images/testimonials/50-million.png" alt="Print do jogo" class="proof-img" onclick="openImage(this.src)">
+                </div>
+                <p class="proof-comment">"Sem palavras. 50 Milhões e nível 500 sem levar ban. Já passaram 2 meses e tudo tranquilo, vou comprar novamente com certeza"</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ÚLTIMAS ENTREGAS SECTION -->
+    <section id="last-orders" class="last-orders-section">
+        <div class="section-header">
+            <h2 data-speed="1.1">Últimas Entregas</h2>
+            <p data-speed="1.2">Entregas recentes em tempo real.</p>
+        </div>
+
+        <div class="orders-timeline">
+            <div class="timeline-item" data-speed="1.1">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-badge kingpin">Kingpin Pack</div>
+                    <p class="timeline-time">Há 2 horas</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-speed="1.1">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-badge starter">Starter Pack</div>
+                    <p class="timeline-time">Há 5 horas</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-speed="1.1">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-badge garage">Modded Garage</div>
+                    <p class="timeline-time">Há 8 horas</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-speed="1.1">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-badge kingpin">Kingpin Pack</div>
+                    <p class="timeline-time">Há 12 horas</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-speed="1.1">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-badge starter">Starter Pack</div>
+                    <p class="timeline-time">Há 1 dia</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-speed="1.1">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-badge garage">Modded Garage</div>
+                    <p class="timeline-time">Há 1 dia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="faq-section">
+        <div class="section-header">
+            <h2 data-speed="1.1">Perguntas Frequentes</h2>
+            <p data-speed="1.2">Tudo o que precisas de saber.</p>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item" data-speed="1.1">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>Posso ser banido?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Usamos métodos testados e seguros que minimizam o risco. No entanto, qualquer modificação viola os Termos de Serviço da Rockstar Games, e existe sempre um risco mínimo. Use por sua conta e risco. Até hoje, nenhum dos nossos clientes reportou banimentos.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-speed="1.1">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>Quanto tempo demora?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>A entrega é garantida em até 24 horas após a confirmação do pagamento. Na maioria dos casos, completamos o serviço em 2-6 horas, dependendo da disponibilidade e do pacote escolhido.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-speed="1.1">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>Preciso de dar acesso à minha conta?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Sim, é necessário partilhar temporariamente o acesso à tua conta Rockstar Social Club para que possamos aplicar as modificações. Recomendamos alterar a password após a conclusão do serviço. Os teus dados são tratados com total confidencialidade.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-speed="1.1">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>Como funciona o pagamento?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Aceitamos pagamentos seguros via Stripe, PayPal ou Criptomoedas. Após escolheres o pacote, serás redirecionado para um terminal de pagamento seguro. Não guardamos dados de cartão de crédito. Para mais detalhes sobre o processo completo, consulta a secção "Como Funciona" abaixo.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-speed="1.1">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>Oferecem reembolsos?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Não oferecemos reembolsos após a entrega do serviço, pois o trabalho já foi realizado. No entanto, se houver algum problema técnico da nossa parte, faremos os ajustes necessários gratuitamente até ficares satisfeito.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section id="how-it-works" class="how-it-works-section">
+        <div class="section-header">
+            <h2 data-speed="1.1">Como Funciona?</h2>
+            <p data-speed="1.2">Processo simples em 4 passos.</p>
+        </div>
+
+        <div class="steps-container">
+            <div class="step-item" data-speed="1.1">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Escolhe o Pacote</h3>
+                    <p>Navega pelos nossos pacotes e escolhe aquele que melhor se adapta às tuas necessidades. Cada pacote tem detalhes específicos sobre o que inclui.</p>
+                </div>
+            </div>
+
+            <div class="step-item" data-speed="1.1">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Efetua o Pagamento</h3>
+                    <p>Pagamento 100% seguro através de Stripe, PayPal ou Criptomoedas. Receberás uma confirmação automática por email após o pagamento.</p>
+                </div>
+            </div>
+
+            <div class="step-item" data-speed="1.1">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Partilha o Acesso</h3>
+                    <p>Envia-nos os dados de acesso da tua conta Rockstar Social Club através do email que usaste no pagamento. Mantemos total confidencialidade.</p>
+                </div>
+            </div>
+
+            <div class="step-item" data-speed="1.1">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Recebe em 24h</h3>
+                    <p>Modificamos a tua conta com segurança e notificamos-te assim que estiver pronta. Podes voltar a jogar com tudo desbloqueado!</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="#products" class="cta-btn-final" data-speed="1">Começar Agora</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 LS Boost. Todos os direitos reservados.</p>
+        <p class="disclaimer">Não somos afiliados à Rockstar Games. Use por sua conta e risco.</p>
+    </footer>
+
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <button id="back-to-top" class="back-to-top" onclick="scrollToTop()">
+        <span>↑</span>
+    </button>
+
+</div>
+</div>
+
+    <!--Product Pop-up-->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeProduct()">&times;</span>
+            <div class="modal-body" id="modal-details">
+                </div>
+        </div>
+    </div>
+
+    <!--Image Pop-up-->
+    <div id="image-modal" class="modal" onclick="closeImage()">
+    <span class="close-btn">&times;</span>
+    <img class="modal-content-img" id="full-image">
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://assets.codepen.io/16327/ScrollSmoother.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

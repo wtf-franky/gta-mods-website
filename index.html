@@ -66,6 +66,7 @@
 
         <div class="products-grid">
             <div class="product-card" onclick="openProduct('starter')" data-speed="1.1">
+                <div class="badge">Iniciante</div>
                 <div class="card-header">
                     <h3>Starter Pack</h3>
                     <p class="price">10€</p>
@@ -84,7 +85,7 @@
             </div>
 
             <div class="product-card highlight" onclick="openProduct('kingpin')" data-speed="1.1">
-                <div class="badge">Mais Vendido</div>
+                <div class="badge">Melhor Custo-Benefício</div>
                 <div class="card-header">
                     <h3>Kingpin Pack</h3>
                     <p class="price">40€</p>
@@ -106,6 +107,7 @@
             </div>
 
             <div class="product-card" onclick="openProduct('cars')" data-speed="1.1">
+                <div class="badge">Perfeito como complemento</div>
                 <div class="card-header">
                     <h3>Modded Garage</h3>
                     <p class="price">25€</p>
@@ -131,81 +133,86 @@
         <div class="section-header">
             <h2 data-speed="1.1">Feedback da Comunidade</h2>
             <p data-speed="1.2">Prints reais de clientes satisfeitos.</p>
+            <a href="https://discord.com/invite/Cwscjc5DyB" target="_blank">
+            <svg width="800px" height="1.5rem" viewBox="0 0.5 24 24" id="meteor-icon-kit__solid-discord" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_537_21)">
+                <path d="M20.317 4.54101C18.7873 3.82774 17.147 3.30224 15.4319 3.00126C15.4007 2.99545 15.3695 3.00997 15.3534 3.039C15.1424 3.4203 14.9087 3.91774 14.7451 4.30873C12.9004 4.02808 11.0652 4.02808 9.25832 4.30873C9.09465 3.90905 8.85248 3.4203 8.64057 3.039C8.62448 3.01094 8.59328 2.99642 8.56205 3.00126C6.84791 3.30128 5.20756 3.82678 3.67693 4.54101C3.66368 4.54681 3.65233 4.5565 3.64479 4.56907C0.533392 9.29283 -0.31895 13.9005 0.0991801 18.451C0.101072 18.4733 0.11337 18.4946 0.130398 18.5081C2.18321 20.0401 4.17171 20.9701 6.12328 21.5866C6.15451 21.5963 6.18761 21.5847 6.20748 21.5585C6.66913 20.9179 7.08064 20.2424 7.43348 19.532C7.4543 19.4904 7.43442 19.441 7.39186 19.4246C6.73913 19.173 6.1176 18.8662 5.51973 18.5178C5.47244 18.4897 5.46865 18.421 5.51216 18.3881C5.63797 18.2923 5.76382 18.1926 5.88396 18.0919C5.90569 18.0736 5.93598 18.0697 5.96153 18.0813C9.88928 19.9036 14.1415 19.9036 18.023 18.0813C18.0485 18.0687 18.0788 18.0726 18.1015 18.091C18.2216 18.1916 18.3475 18.2923 18.4742 18.3881C18.5177 18.421 18.5149 18.4897 18.4676 18.5178C17.8697 18.8729 17.2482 19.173 16.5945 19.4236C16.552 19.4401 16.533 19.4904 16.5538 19.532C16.9143 20.2414 17.3258 20.9169 17.7789 21.5576C17.7978 21.5847 17.8319 21.5963 17.8631 21.5866C19.8241 20.9701 21.8126 20.0401 23.8654 18.5081C23.8834 18.4946 23.8948 18.4742 23.8967 18.452C24.3971 13.1911 23.0585 8.6212 20.3482 4.57004C20.3416 4.5565 20.3303 4.54681 20.317 4.54101ZM8.02002 15.6802C6.8375 15.6802 5.86313 14.577 5.86313 13.222C5.86313 11.8671 6.8186 10.7639 8.02002 10.7639C9.23087 10.7639 10.1958 11.8768 10.1769 13.222C10.1769 14.577 9.22141 15.6802 8.02002 15.6802ZM15.9947 15.6802C14.8123 15.6802 13.8379 14.577 13.8379 13.222C13.8379 11.8671 14.7933 10.7639 15.9947 10.7639C17.2056 10.7639 18.1705 11.8768 18.1516 13.222C18.1516 14.577 17.2056 15.6802 15.9947 15.6802Z" fill="#758CA3"/>
+                </g><defs><clipPath id="clip0_537_21"><rect width="24" height="24" fill="white"/></clipPath></defs>
+            </svg>
+        </a>
         </div>
 
         <div class="proof-grid">
-            
-            <div data-speed="1.1" class="proof-card">
+            <div class="proof-card" data-speed="1.1">
                 <div class="proof-header">
                     <div class="user-info">
-                        <h4>D4rkSlayer-_-</h4>
-                        <span class="pack-badge">Starter Pack</span>
+                        <h4>Cliente #47</h4>
+                        <span class="pack-badge">Kingpin Pack</span>
                     </div>
-                    <div class="proof-stars">★★★★★</div>
+                    <span class="proof-stars">★★★★★</span>
                 </div>
-                <div class="proof-img-container">
-                    <img draggable="false" src="./images/testimonials/10M-print.png" alt="Print do jogo" class="proof-img" onclick="openImage(this.src)">
+                <div class="proof-img-container" onclick="openImage('./images/testimonials/testimonial-4.png')">
+                    <img draggable="false" src="./images/testimonials/testimonial-4.png" alt="Print feedback" class="proof-img">
                 </div>
-                <p class="proof-comment">"Topp, tinha apenas 100k na conta e ele entregou os 10M em menos de 20 minutos e por apenas 10€ vale bem apena. Também fiquei com as stats do personagem no máximo e ainda recebi alguns trajes mod porque eu já estava nível 134."</p>
+                <p class="proof-comment">"Recebi tudo em menos de 12 horas! Recomendo muito."</p>
             </div>
 
-            <div data-speed="1.1" class="proof-card">
+            <div class="proof-card" data-speed="1.1">
                 <div class="proof-header">
                     <div class="user-info">
-                        <h4>João_M.</h4>
+                        <h4>Cliente #126</h4>
+                        <span class="pack-badge">Kingpin Pack</span>
+                    </div>
+                    <span class="proof-stars">★★★★★</span>
+                </div>
+                <div class="proof-img-container" onclick="openImage('./images/testimonials/testimonial-3.png')">
+                    <img draggable="false" src="./images/testimonials/testimonial-3.png" alt="Print feedback" class="proof-img">
+                </div>
+                <p class="proof-comment">"Muito profissionais. Conta segura e sem problemas."</p>
+            </div>
+
+            <div class="proof-card" data-speed="1.1">
+                <div class="proof-header">
+                    <div class="user-info">
+                        <h4>Cliente #148</h4>
                         <span class="pack-badge">Modded Garage</span>
                     </div>
-                    <div class="proof-stars">★★★★★</div>
+                    <span class="proof-stars">★★★★★</span>
                 </div>
-                <div class="proof-img-container">
-                    <img draggable="false" src="./images/testimonials/carros-mod.png" alt="Print do jogo" class="proof-img" onclick="openImage(this.src)">
+                <div class="proof-img-container" onclick="openImage('./images/testimonials/testimonial-2.png')">
+                    <img draggable="false" src="./images/testimonials/testimonial-2.png" alt="Print feedback" class="proof-img">
                 </div>
-                <p class="proof-comment">"Só queria uns carro mod e ele entregou tudo direitinho em 30 minutos, recebi 10 carros mod e um brinde de 20 níveis para chegar a nível 120, muito obrigado!!😁"</p>
+                <p class="proof-comment">"Os carros ficaram insanos! Exatamente o que queria."</p>
             </div>
 
-            <div data-speed="1" class="proof-card">
+            <div class="proof-card" data-speed="1.1">
                 <div class="proof-header">
                     <div class="user-info">
-                        <h4>Ricard0_99</h4>
-                        <span class="pack-badge">Kingpin Pack</span>
+                        <h4>Cliente #63</h4>
+                        <span class="pack-badge">Starter Pack</span>
                     </div>
-                    <div class="proof-stars">★★★★★</div>
+                    <span class="proof-stars">★★★★★</span>
                 </div>
-                <div class="proof-img-container">
-                    <img draggable="false" src="./images/testimonials/stats-print.png" alt="Print do jogo" class="proof-img" onclick="openImage(this.src)">
+                <div class="proof-img-container" onclick="openImage('./images/testimonials/testimonial-1.png')">
+                    <img draggable="false" src="./images/testimonials/testimonial-1.png" alt="Print feedback" class="proof-img">
                 </div>
-                <p class="proof-comment">"Escolhi um nível baixo para ser seguro, as stats ficaram no máximo e ainda aumentou o meu K/D como brinde, aconselho muito e ele é bem rápido!"</p>
+                <p class="proof-comment">"Rápido e eficiente. Vou voltar a comprar!"</p>
             </div>
-
-            <div data-speed="1" class="proof-card">
-                <div class="proof-header">
-                    <div class="user-info">
-                        <h4>GhostRider</h4>
-                        <span class="pack-badge">Kingpin Pack</span>
-                    </div>
-                    <div class="proof-stars">★★★★★</div>
-                </div>
-                <div class="proof-img-container">
-                    <img draggable="false" src="./images/testimonials/50-million.png" alt="Print do jogo" class="proof-img" onclick="openImage(this.src)">
-                </div>
-                <p class="proof-comment">"Sem palavras. 50 Milhões e nível 500 sem levar ban. Já passaram 2 meses e tudo tranquilo, vou comprar novamente com certeza"</p>
-            </div>
-
         </div>
     </section>
 
-    <!-- ÚLTIMAS ENTREGAS SECTION -->
+    <!-- ÚLTIMAS ENTREGAS - TIMELINE STYLE -->
     <section id="last-orders" class="last-orders-section">
         <div class="section-header">
             <h2 data-speed="1.1">Últimas Entregas</h2>
-            <p data-speed="1.2">Entregas recentes em tempo real.</p>
+            <p data-speed="1.2">Acompanha as entregas mais recentes em tempo real.</p>
         </div>
 
         <div class="orders-timeline">
             <div class="timeline-item" data-speed="1.1">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <div class="timeline-badge kingpin">Kingpin Pack</div>
+                    <span class="timeline-badge kingpin">Kingpin Pack</span>
                     <p class="timeline-time">Há 2 horas</p>
                 </div>
             </div>
@@ -213,7 +220,7 @@
             <div class="timeline-item" data-speed="1.1">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <div class="timeline-badge starter">Starter Pack</div>
+                    <span class="timeline-badge starter">Starter Pack</span>
                     <p class="timeline-time">Há 5 horas</p>
                 </div>
             </div>
@@ -221,7 +228,7 @@
             <div class="timeline-item" data-speed="1.1">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <div class="timeline-badge garage">Modded Garage</div>
+                    <span class="timeline-badge garage">Modded Garage</span>
                     <p class="timeline-time">Há 8 horas</p>
                 </div>
             </div>
@@ -229,7 +236,7 @@
             <div class="timeline-item" data-speed="1.1">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <div class="timeline-badge kingpin">Kingpin Pack</div>
+                    <span class="timeline-badge kingpin">Kingpin Pack</span>
                     <p class="timeline-time">Há 12 horas</p>
                 </div>
             </div>
@@ -237,15 +244,15 @@
             <div class="timeline-item" data-speed="1.1">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <div class="timeline-badge starter">Starter Pack</div>
-                    <p class="timeline-time">Há 1 dia</p>
+                    <span class="timeline-badge kingpin">Kingpin Pack</span>
+                    <p class="timeline-time">Há 18 horas</p>
                 </div>
             </div>
 
             <div class="timeline-item" data-speed="1.1">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <div class="timeline-badge garage">Modded Garage</div>
+                    <span class="timeline-badge starter">Starter Pack</span>
                     <p class="timeline-time">Há 1 dia</p>
                 </div>
             </div>
@@ -256,27 +263,27 @@
     <section id="faq" class="faq-section">
         <div class="section-header">
             <h2 data-speed="1.1">Perguntas Frequentes</h2>
-            <p data-speed="1.2">Tudo o que precisas de saber.</p>
+            <p data-speed="1.2">Tudo o que precisa de saber antes de comprar.</p>
         </div>
 
         <div class="faq-container">
             <div class="faq-item" data-speed="1.1">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    <h3>Posso ser banido?</h3>
+                    <h3>É seguro? Posso ser banido?</h3>
                     <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Usamos métodos testados e seguros que minimizam o risco. No entanto, qualquer modificação viola os Termos de Serviço da Rockstar Games, e existe sempre um risco mínimo. Use por sua conta e risco. Até hoje, nenhum dos nossos clientes reportou banimentos.</p>
+                    <p>Utilizamos métodos discretos e seguros. Nenhum cliente foi banido até hoje. Trabalhamos com técnicas que não levantam suspeitas junto da Rockstar Games.</p>
                 </div>
             </div>
 
             <div class="faq-item" data-speed="1.1">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    <h3>Quanto tempo demora?</h3>
+                    <h3>Quanto tempo demora a entrega?</h3>
                     <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>A entrega é garantida em até 24 horas após a confirmação do pagamento. Na maioria dos casos, completamos o serviço em 2-6 horas, dependendo da disponibilidade e do pacote escolhido.</p>
+                    <p>A maioria das entregas é feita em <span class="ls-boost-text">menos de 24 horas</span>. Pacotes prioritários como o <span class="yellow-text">Kingpin</span> têm prioridade na fila e são entregues mais rapidamente.</p>
                 </div>
             </div>
 
@@ -284,9 +291,19 @@
                 <div class="faq-question" onclick="toggleFaq(this)">
                     <h3>Preciso de dar acesso à minha conta?</h3>
                     <span class="faq-icon">+</span>
+                </div><span class="ls-boost-text">
+                <div class="faq-answer">
+                    <p>Sim, é necessário partilhar <span class="yellow-text">temporariamente</span> o acesso à sua conta para que possamos aplicar as modificações. Recomendamos alterar a password após a conclusão do serviço. Os seus dados são tratados com <span class="ls-boost-text">total confidencialidade</span> e apenas o técnico que entrou em contacto consigo tem acesso à sua conta apenas e durante o processo do serviço.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-speed="1.1">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>Quais plataformas trabalham?</h3>
+                    <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Sim, é necessário partilhar temporariamente o acesso à tua conta Rockstar Social Club para que possamos aplicar as modificações. Recomendamos alterar a password após a conclusão do serviço. Os teus dados são tratados com total confidencialidade.</p>
+                    <p>A equipa <span class="ls-boost-text">LS Boost</span> apenas trabalha em contas do <span class="yellow-text">Rockstar Games Launcher</span>, <span class="blue-text">Steam</span> e <span class="purple-text">Epic Games</span>. Quais plataformas externas como <span class="blue-text">PS4/PS5</span> ou <span class="ls-boost-text">XBOX</span> não trabalhamos.</p>
                 </div>
             </div>
 
@@ -296,7 +313,7 @@
                     <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Aceitamos pagamentos seguros via Stripe, PayPal ou Criptomoedas. Após escolheres o pacote, serás redirecionado para um terminal de pagamento seguro. Não guardamos dados de cartão de crédito. Para mais detalhes sobre o processo completo, consulta a secção "Como Funciona" abaixo.</p>
+                    <p>Após escolher o pacote, será redirecionado para um terminal de pagamento seguro via <span class="purple-text">Stripe</span>. A equipa da <span class="ls-boost-text">LS Boost</span> não guarda dados de cartão de crédito/débito. Para mais detalhes sobre o processo completo, consultar a secção <a href="#how-it-works" class="blue-text">Como Funciona</a> abaixo.</p>
                 </div>
             </div>
 
@@ -306,7 +323,17 @@
                     <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Não oferecemos reembolsos após a entrega do serviço, pois o trabalho já foi realizado. No entanto, se houver algum problema técnico da nossa parte, faremos os ajustes necessários gratuitamente até ficares satisfeito.</p>
+                    <p>Não oferecemos reembolsos após a entrega do serviço, pois o trabalho já foi realizado. No entanto, se houver algum problema técnico da nossa parte, faremos os ajustes necessários para o cliente ficar satisfeito.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-speed="1.1">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <h3>Existe alguma comunidade da LS Boost?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Sim a <span class="ls-boost-text">LS Boost</span> para além de ter o seu website de venda de Serviços para contas de GTA Online Enhanced PC também tem um Servidor no <a href="https://discord.com/invite/Cwscjc5DyB" target="_blank" class="blue-text">Discord</a> onde podem falar com os player que também compram os nossos serviços.</p>
                 </div>
             </div>
         </div>
@@ -323,32 +350,32 @@
             <div class="step-item" data-speed="1.1">
                 <div class="step-number">1</div>
                 <div class="step-content">
-                    <h3>Escolhe o Pacote</h3>
-                    <p>Navega pelos nossos pacotes e escolhe aquele que melhor se adapta às tuas necessidades. Cada pacote tem detalhes específicos sobre o que inclui.</p>
+                    <h3>Escolha o Pacote</h3>
+                    <p>Navegue pelos nossos pacotes e escolha aquele que melhor se adapta às suas necessidades. Cada pacote tem detalhes específicos sobre o que inclui.</p>
                 </div>
             </div>
 
             <div class="step-item" data-speed="1.1">
                 <div class="step-number">2</div>
                 <div class="step-content">
-                    <h3>Efetua o Pagamento</h3>
-                    <p>Pagamento 100% seguro através de Stripe, PayPal ou Criptomoedas. Receberás uma confirmação automática por email após o pagamento.</p>
+                    <h3>Efetue o Pagamento</h3>
+                    <p>Pagamento 100% seguro através da Stripe. Receberá uma confirmação automática por email após o pagamento.</p>
                 </div>
             </div>
 
             <div class="step-item" data-speed="1.1">
                 <div class="step-number">3</div>
                 <div class="step-content">
-                    <h3>Partilha o Acesso</h3>
-                    <p>Envia-nos os dados de acesso da tua conta Rockstar Social Club através do email que usaste no pagamento. Mantemos total confidencialidade.</p>
+                    <h3>Partilhar o Acesso</h3>
+                    <p>Envie os dados de acesso da sua conta através do email que usou no pagamento. Mantemos total confidencialidade.</p>
                 </div>
             </div>
 
             <div class="step-item" data-speed="1.1">
                 <div class="step-number">4</div>
                 <div class="step-content">
-                    <h3>Recebe em 24h</h3>
-                    <p>Modificamos a tua conta com segurança e notificamos-te assim que estiver pronta. Podes voltar a jogar com tudo desbloqueado!</p>
+                    <h3>Receba em 24h</h3>
+                    <p>Modificamos a sua conta com segurança e notificamos assim que estiver pronta.</p>
                 </div>
             </div>
         </div>
@@ -357,6 +384,13 @@
     </section>
 
     <footer>
+        <a href="https://discord.com/invite/Cwscjc5DyB" target="_blank">
+            <svg width="800px" height="1.5rem" viewBox="0 0.5 24 24" id="meteor-icon-kit__solid-discord" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_537_21)">
+                <path d="M20.317 4.54101C18.7873 3.82774 17.147 3.30224 15.4319 3.00126C15.4007 2.99545 15.3695 3.00997 15.3534 3.039C15.1424 3.4203 14.9087 3.91774 14.7451 4.30873C12.9004 4.02808 11.0652 4.02808 9.25832 4.30873C9.09465 3.90905 8.85248 3.4203 8.64057 3.039C8.62448 3.01094 8.59328 2.99642 8.56205 3.00126C6.84791 3.30128 5.20756 3.82678 3.67693 4.54101C3.66368 4.54681 3.65233 4.5565 3.64479 4.56907C0.533392 9.29283 -0.31895 13.9005 0.0991801 18.451C0.101072 18.4733 0.11337 18.4946 0.130398 18.5081C2.18321 20.0401 4.17171 20.9701 6.12328 21.5866C6.15451 21.5963 6.18761 21.5847 6.20748 21.5585C6.66913 20.9179 7.08064 20.2424 7.43348 19.532C7.4543 19.4904 7.43442 19.441 7.39186 19.4246C6.73913 19.173 6.1176 18.8662 5.51973 18.5178C5.47244 18.4897 5.46865 18.421 5.51216 18.3881C5.63797 18.2923 5.76382 18.1926 5.88396 18.0919C5.90569 18.0736 5.93598 18.0697 5.96153 18.0813C9.88928 19.9036 14.1415 19.9036 18.023 18.0813C18.0485 18.0687 18.0788 18.0726 18.1015 18.091C18.2216 18.1916 18.3475 18.2923 18.4742 18.3881C18.5177 18.421 18.5149 18.4897 18.4676 18.5178C17.8697 18.8729 17.2482 19.173 16.5945 19.4236C16.552 19.4401 16.533 19.4904 16.5538 19.532C16.9143 20.2414 17.3258 20.9169 17.7789 21.5576C17.7978 21.5847 17.8319 21.5963 17.8631 21.5866C19.8241 20.9701 21.8126 20.0401 23.8654 18.5081C23.8834 18.4946 23.8948 18.4742 23.8967 18.452C24.3971 13.1911 23.0585 8.6212 20.3482 4.57004C20.3416 4.5565 20.3303 4.54681 20.317 4.54101ZM8.02002 15.6802C6.8375 15.6802 5.86313 14.577 5.86313 13.222C5.86313 11.8671 6.8186 10.7639 8.02002 10.7639C9.23087 10.7639 10.1958 11.8768 10.1769 13.222C10.1769 14.577 9.22141 15.6802 8.02002 15.6802ZM15.9947 15.6802C14.8123 15.6802 13.8379 14.577 13.8379 13.222C13.8379 11.8671 14.7933 10.7639 15.9947 10.7639C17.2056 10.7639 18.1705 11.8768 18.1516 13.222C18.1516 14.577 17.2056 15.6802 15.9947 15.6802Z" fill="#758CA3"/>
+                </g><defs><clipPath id="clip0_537_21"><rect width="24" height="24" fill="white"/></clipPath></defs>
+            </svg>
+        </a>
         <p>&copy; 2026 LS Boost. Todos os direitos reservados.</p>
         <p class="disclaimer">Não somos afiliados à Rockstar Games. Use por sua conta e risco.</p>
     </footer>
@@ -382,6 +416,24 @@
     <div id="image-modal" class="modal" onclick="closeImage()">
     <span class="close-btn">&times;</span>
     <img draggable="false" class="modal-content-img" id="full-image">
+    </div>
+
+    <!-- Upsell Modal -->
+    <div id="upsell-modal" class="upsell-modal">
+        <div class="upsell-content">
+            <span class="upsell-close-btn" onclick="closeUpsell()">&times;</span>
+            <div class="upsell-icon">⚠️</div>
+            <h3 class="upsell-title">Aviso Importante!</h3>
+            <p class="upsell-text" id="upsell-text">A maioria dos jogadores faz upgrade porque 10M GTA$ esgotam rápido.</p>
+            <div class="upsell-buttons">
+                <button class="upsell-btn-primary" onclick="goToKingpin()">
+                    Ver Pack Mais Vendido 👑
+                </button>
+                <button class="upsell-btn-secondary" id="upsell-continue-btn" onclick="continueToPurchase()">
+                    Continuar com Starter
+                </button>
+            </div>
+        </div>
     </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

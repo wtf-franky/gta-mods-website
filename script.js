@@ -27,51 +27,62 @@ const productsData = {
     starter: {
         title: "Starter Pack",
         price: "10€",
-        description: "O pacote ideal para quem está a começar ou quer um boost rápido sem exageros.",
+        image: "./images/website-images/starter-pack.png",
+        badge: "Iniciante",
+        stripeLink: "https://buy.stripe.com/dRm6oG8rx5z0gMx3hT0gw00",
+        description: "O pacote ideal para quem está a começar ou quer um boost rápido sem exageros. Perfeito para iniciantes que querem ter uma base sólida em Los Santos.",
         details: [
-            "Entrega em 20-30 min", 
             "10 Milhões GTA$", 
             "Nível 120", 
-            "Stats no máximo"
+            "Stats no máximo",
         ],
         guarantees: [
-            "✓ Pagamento Seguro via Stripe, PayPal ou Crypto",
-            "✓ Entrega garantida em 24h",
-            "✗ Não são aceites reembolsos"
+            { icon: "🔒", text: "Pagamento 100% Seguro" },
+            { icon: "⚡", text: "Entrega em até 24h" },
+            { icon: "‎ ✓", text: "‎ Suporte 24/7" }
         ]
     },
     kingpin: {
         title: "Kingpin Pack",
         price: "40€",
-        description: "Torne-se o dono de Los Santos. Dinheiro e tudo desbloqueado.",
+        image: "./images/website-images/kingpin-pack.png",
+        badge: "Mais Popular",
+        stripeLink: "https://buy.stripe.com/00waEW239d1sbsdg4F0gw01",
+        description: "Torne-se o dono de Los Santos com o pacote mais completo. Dinheiro ilimitado, tudo desbloqueado e carros exclusivos para dominar as ruas.",
         details: [
             "Entrega Prioritária", 
             "50 Milhões GTA$", 
-            "Nível à escolha", 
-            "Unlock All", 
-            "Fast Run", 
-            "10 Carros Mod"
+            "Nível à escolha (até 8000)", 
+            "Unlock All (Roupas/Tattoos)",
+            "Stats Máximos",
+            "Corridinha Mod (Fast Run)",
+            "10 Carros Mod",
+            "10 Trajes Mod"
         ],
         guarantees: [
-            "✓ Pagamento Seguro via Stripe, PayPal ou Crypto",
-            "✓ Entrega garantida em 24h",
-            "✗ Não são aceites reembolsos"
+            { icon: "🔒", text: "Pagamento 100% Seguro" },
+            { icon: "⚡", text: "Entrega Prioritária" },
+            { icon: "‎ ✓", text: "‎ Suporte 24/7" }
         ]
     },
     cars: {
         title: "Modded Garage",
         price: "25€",
-        description: "Enchemos uma garagem de 10 carros à sua escolha com modificações raras.",
+        image: "./images/website-images/modded-garage.png",
+        badge: "Exclusivo",
+        stripeLink: "https://buy.stripe.com/cNi00iazF6D4ao9aKl0gw02",
+        description: "Enchemos uma garagem completa de 10 carros à sua escolha com modificações raras e exclusivas que não encontras em mais lado nenhum.",
         details: [
-            "10 Carros Mod", 
+            "10 Carros Mod à escolha", 
             "Rodas F1 ou Benny's", 
             "Pinturas Mod", 
-            "Matrículas Yankton"
+            "Placas Personalizadas/Limpas",
+            "Buzinas Mod"
         ],
         guarantees: [
-            "✓ Pagamento Seguro via Stripe, PayPal ou Crypto",
-            "✓ Entrega garantida em 24h",
-            "✗ Não são aceites reembolsos"
+            { icon: "🔒", text: "Pagamento 100% Seguro" },
+            { icon: "⚡", text: "Entrega em até 24h" },
+            { icon: "‎ ✓", text: "‎ Suporte 24/7" }
         ]
     }
 };
@@ -85,26 +96,77 @@ function openProduct(productId) {
     if (!product) return;
 
     modalDetails.innerHTML = `
-        <h2 class="modal-title">${product.title}</h2>
-        <span class="modal-price">${product.price}</span>
-        <p class="modal-desc">${product.description}</p>
-        <ul class="features">
-            ${product.details.map(detail => `<li>${detail}</li>`).join('')}
-        </ul>
-        <div class="modal-guarantees">
-            ${product.guarantees.map(guarantee => `<p>${guarantee}</p>`).join('')}
-        </div>
-        <div style="margin-top: 2rem;">
-            <p style="color: #888; font-size: 0.9rem; margin-bottom: 0.5rem;">Métodos de Pagamento Aceites:</p>
-            <div class="payment-methods">
-                <span class="pay-icon">Stripe</span>
-                <span class="pay-icon">PayPal</span>
-                <span class="pay-icon">Crypto</span>
+        <div class="modal-layout">
+            <div class="modal-left">
+                <div class="modal-image-wrapper">
+                    <span class="modal-badge">${product.badge}</span>
+                    <img draggable="false" src="${product.image}" alt="${product.title}" class="modal-product-image">
+                </div>
+                <div class="modal-guarantees-box">
+                    <h4 class="guarantees-title">Garantias:</h4>
+                    ${product.guarantees.map(g => `
+                        <div class="guarantee-item">
+                            <span class="guarantee-icon">${g.icon}</span>
+                            <span class="guarantee-text">${g.text}</span>
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="trust-badges">
+                    <div class="trust-item">
+                        <span class="trust-icon">⭐</span>
+                        <span class="trust-text">4.8 Rating</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">👥</span>
+                        <span class="trust-text">100+ Clientes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-right">
+                <div class="modal-header-section">
+                    <h2 class="modal-title">${product.title}</h2>
+                    <div class="modal-price-box">
+                        <span class="price-label">Apenas</span>
+                        <span class="modal-price">${product.price}</span>
+                    </div>
+                </div>
+                <p class="modal-desc">${product.description}</p>
+                
+                <div class="modal-features-section">
+                    <h3 class="modal-subtitle">
+                        <span class="subtitle-icon">📦</span>
+                        O que está incluído:
+                    </h3>
+                    <ul class="features modal-features">
+                        ${product.details.map(detail => `<li>${detail}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="modal-footer">
+                    <div class="payment-section">
+                        <p class="payment-label">
+                            Métodos de Pagamento Aceites
+                        </p>
+                        <div class="payment-methods">
+                            <span class="pay-icon">
+                                <img draggable="false" src="https://www.vectorlogo.zone/logos/stripe/stripe-ar21~bgwhite.svg" class="btn-icon">
+                            </span>
+                        </div>
+                    </div>
+                    <a href="${product.stripeLink}" target="_blank" class="btn-buy">
+                        <span class="btn-icon">
+                            <img draggable="false" src="https://www.vectorlogo.zone/logos/stripe/stripe-ar21~bgwhite.svg" class="btn-icon">
+                        </span>
+                        <span class="btn-text">Comprar Agora</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+                    <p class="secure-note">
+                        <span class="secure-icon">🔒</span>
+                        Pagamento 100% seguro e encriptado via Stripe
+                    </p>
+                </div>
             </div>
         </div>
-        <a href="https://discord.com" target="_blank" class="btn-buy">
-            <i class="fab fa-discord"></i> Comprar via Discord
-        </a>
     `;
 
     modal.classList.add("show");
@@ -158,20 +220,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// 8. GERADOR DE DINHEIRO (MONEY RAIN)
+// 8. GERADOR DE DINHEIRO (MONEY RAIN) - GTA STYLE
 function createMoneyRain() {
     const container = document.getElementById('money-rain');
     if (!container) return;
     
-    const icons = ['$', '💵', '💸'];
-    for (let i = 0; i < 30; i++) {
+    // Apenas o símbolo $ do GTA
+    for (let i = 0; i < 25; i++) {
         const particle = document.createElement('span');
         particle.classList.add('money-particle');
-        particle.innerText = icons[Math.floor(Math.random() * icons.length)];
+        particle.innerText = '$';
         particle.style.left = Math.random() * 100 + 'vw';
-        particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        particle.style.animationDuration = (Math.random() * 4 + 3) + 's';
         particle.style.animationDelay = Math.random() * 5 + 's';
-        particle.style.fontSize = (Math.random() * 20 + 10) + 'px';
+        particle.style.fontSize = (Math.random() * 40 + 30) + 'px';
         container.appendChild(particle);
     }
 }
@@ -202,8 +264,8 @@ function animateCounter() {
     if (!counter) return;
     
     let count = 0;
-    const target = 17;
-    const duration = 2000;
+    const target = 34;
+    const duration = 1500;
     const increment = target / (duration / 16);
     
     const timer = setInterval(() => {
@@ -229,7 +291,7 @@ function scrollToTop() {
 // Mostrar/Esconder botão baseado no scroll
 window.addEventListener('scroll', function() {
     const backToTopBtn = document.getElementById('back-to-top');
-    if (window.pageYOffset > 500) {
+    if (window.pageYOffset > 300) {
         backToTopBtn.classList.add('show');
     } else {
         backToTopBtn.classList.remove('show');

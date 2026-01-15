@@ -46,6 +46,22 @@ section {
     scroll-margin-top: 90px;
 }
 
+.ls-boost-text{
+    color: #00ff88;
+}
+
+.yellow-text{
+    color: #ffd700;
+}
+
+.blue-text{
+    color: #00bfff;
+}
+
+.purple-text{
+    color: #8b00ff;
+}
+
 /* ==================================================
    2. ANIMAÇÕES E BACKGROUND (MONEY RAIN)
    ================================================== */
@@ -115,7 +131,7 @@ section {
     transition: var(--transition);
     text-decoration: none;
 }
-.nav-links a:hover, .nav-links a.active { color: var(--text-main); }
+.nav-links a:hover, .nav-links a.active { color: var(--text-main); text-decoration: none;}
 
 .cta-btn-nav {
     padding: 0.5rem 1.2rem;
@@ -629,8 +645,9 @@ section {
 
 .btn-buy {
     transition: all 0.3s ease; 
+    animation: pulse 2s ease-out infinite;
     width: 100%; 
-    border: 2px solid var(--accent); 
+    border: 1px solid var(--accent); 
     padding: 0.6rem 1.5rem; 
     background: linear-gradient(135deg, var(--accent), #00bfff);
     color: #000; 
@@ -650,6 +667,13 @@ section {
     box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
 }
 
+@keyframes  pulse {
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
 .btn-buy::before {
     content: '';
     position: absolute;
@@ -663,6 +687,10 @@ section {
 
 .btn-buy:hover::before {
     left: 100%;
+}
+
+.btn-buy:hover::after {
+    animation: pulse 2s 1s ease-out infinite;
 }
 
 .btn-buy:hover { 
@@ -1218,4 +1246,248 @@ footer p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem; }
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+/* ==================================================
+   13. NOTIFICAÇÕES DO MODAL (TEMPO REAL)
+   ================================================== */
+.modal-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(20, 20, 20, 0.95));
+    border: 1px solid rgba(0, 255, 136, 0.4);
+    border-radius: 12px;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    z-index: 100;
+    max-width: 320px;
+    box-shadow: 0 8px 30px rgba(0, 255, 136, 0.2);
+}
+
+.modal-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modal-notification.kingpin-notification {
+    border-color: rgba(255, 0, 128, 0.5);
+    box-shadow: 0 8px 30px rgba(255, 0, 128, 0.2);
+}
+
+.modal-notification.garage-notification {
+    border-color: rgba(139, 0, 255, 0.5);
+    box-shadow: 0 8px 30px rgba(139, 0, 255, 0.2);
+}
+
+.notification-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    animation: notificationPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes notificationPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.notification-text {
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.notification-text strong {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.modal-notification.kingpin-notification .notification-text strong {
+    color: #ff0080;
+}
+
+.modal-notification.garage-notification .notification-text strong {
+    color: #8b00ff;
+}
+
+/* Responsive Notification */
+@media (max-width: 768px) {
+    .modal-notification {
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        max-width: calc(100% - 20px);
+        padding: 10px 14px;
+    }
+    
+    .notification-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* ==================================================
+   14. UPSELL MODAL
+   ================================================== */
+.upsell-modal {
+    display: none;
+    position: fixed;
+    z-index: 10001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.upsell-modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.upsell-content {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    padding: 3rem;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    border: 2px solid #ffd700;
+    box-shadow: 0 20px 60px rgba(255, 215, 0, 0.2);
+    animation: upsellSlideIn 0.4s ease-out;
+    position: relative;
+}
+
+@keyframes upsellSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.upsell-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: all 0.3s;
+    background: rgba(0, 0, 0, 0.5);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.upsell-close-btn:hover {
+    color: white;
+    background: rgba(255, 0, 0, 0.3);
+    border-color: rgba(255, 0, 0, 0.5);
+}
+
+.upsell-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: upsellIconBounce 1s ease-in-out infinite;
+}
+
+@keyframes upsellIconBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.upsell-title {
+    font-size: 1.8rem;
+    color: #ffd700;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.upsell-text {
+    color: #d0d0d0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.upsell-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.upsell-btn-primary {
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--accent), #00bfff);
+    border: none;
+    border-radius: 10px;
+    color: #000;
+    font-size: 1.1rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
+}
+
+.upsell-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 255, 136, 0.5);
+}
+
+.upsell-btn-secondary {
+    padding: 0.8rem 1.5rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upsell-btn-secondary:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive Upsell Modal */
+@media (max-width: 768px) {
+    .upsell-content {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+    }
+    
+    .upsell-title {
+        font-size: 1.5rem;
+    }
+    
+    .upsell-text {
+        font-size: 1rem;
+    }
+    
+    .upsell-btn-primary {
+        padding: 0.9rem 1.5rem;
+        font-size: 1rem;
+    }
 }

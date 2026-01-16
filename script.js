@@ -108,6 +108,9 @@ const productsData = {
 let currentProductId = null;
 let currentStripeLink = null;
 let notificationTimeout = null;
+let activeNotifications = []; // Array para múltiplas notificações
+const NOTIFICATION_DURATION = 10000; // 10 segundos
+const MAX_NOTIFICATIONS = 5; // Limite máximo de notificações
 
 // 5. CONTEXTO DE ÁUDIO PARA O SOM BLIP
 let audioContext = null;
@@ -157,17 +160,6 @@ function openProduct(productId) {
     const buyButtonTag = product.hasUpsell ? 'button' : 'a';
     const buyButtonCloseTag = product.hasUpsell ? '</button>' : '</a>';
 
-    // Gerar notificação HTML se existir
-    let notificationHTML = '';
-    if (product.notification) {
-        notificationHTML = `
-            <div class="modal-notification ${product.notification.type}" id="modal-notification">
-                <span class="notification-icon">${product.notification.icon}</span>
-                <span class="notification-text">${product.notification.text}</span>
-            </div>
-        `;
-    }
-
     modalDetails.innerHTML = `
         <div class="modal-layout">
             <div class="modal-left">
@@ -193,7 +185,6 @@ function openProduct(productId) {
                     </div>
                 </div>
             </div>
-            ${notificationHTML}
             <div class="modal-right">
                 <div class="modal-header-section">
                     <h2 class="modal-title">${product.title}</h2>
@@ -251,28 +242,140 @@ function openProduct(productId) {
 
     // Mostrar notificação com delay se existir
     if (product.notification) {
+        // Limpar timeout anterior se existir
         if (notificationTimeout) {
             clearTimeout(notificationTimeout);
         }
+        
         notificationTimeout = setTimeout(() => {
-            const notificationEl = document.getElementById('modal-notification');
-            if (notificationEl) {
-                notificationEl.classList.add('show');
-                playBlipSound();
-            }
+            showNotification(product.notification);
         }, 2000);
     }
+}
+
+// Função para mostrar notificação no container global
+function showNotification(notificationData) {
+    const container = document.getElementById('notification-container');
+    if (!container) return;
+    
+    // Verificar limite de notificações
+    if (activeNotifications.length >= MAX_NOTIFICATIONS) {
+        // Remover a notificação mais antiga
+        removeOldestNotification();
+    }
+    
+    // Criar ID único para esta notificação
+    const notificationId = 'notification-' + Date.now();
+    
+    // Criar elemento da notificação
+    const notificationEl = document.createElement('div');
+    notificationEl.className = `modal-notification ${notificationData.type}`;
+    notificationEl.id = notificationId;
+    notificationEl.innerHTML = `
+        <div class="notification-content">
+            <span class="notification-icon">${notificationData.icon}</span>
+            <span class="notification-text">${notificationData.text}</span>
+        </div>
+        <div class="notification-progress-container">
+            <div class="notification-progress-bar"></div>
+        </div>
+    `;
+    
+    // Adicionar ao container
+    container.appendChild(notificationEl);
+    
+    // Mostrar notificação com pequeno delay para animação
+    setTimeout(() => {
+        notificationEl.classList.add('show');
+        playBlipSound();
+    }, 50);
+    
+    // Iniciar barra de progresso
+    const progressBar = notificationEl.querySelector('.notification-progress-bar');
+    let timeLeft = NOTIFICATION_DURATION;
+    const updateInterval = 50;
+    
+    const progressInterval = setInterval(() => {
+        timeLeft -= updateInterval;
+        const percentage = (timeLeft / NOTIFICATION_DURATION) * 100;
+        if (progressBar) {
+            progressBar.style.width = percentage + '%';
+        }
+        
+        if (timeLeft <= 0) {
+            clearInterval(progressInterval);
+            removeNotification(notificationId);
+        }
+    }, updateInterval);
+    
+    // Guardar referência da notificação
+    activeNotifications.push({
+        id: notificationId,
+        element: notificationEl,
+        interval: progressInterval
+    });
+}
+
+// Função para remover uma notificação específica
+function removeNotification(notificationId) {
+    const index = activeNotifications.findIndex(n => n.id === notificationId);
+    if (index === -1) return;
+    
+    const notification = activeNotifications[index];
+    
+    // Limpar interval
+    if (notification.interval) {
+        clearInterval(notification.interval);
+    }
+    
+    // Animar saída
+    if (notification.element) {
+        notification.element.classList.remove('show');
+        
+        // Remover do DOM após animação
+        setTimeout(() => {
+            if (notification.element && notification.element.parentNode) {
+                notification.element.parentNode.removeChild(notification.element);
+            }
+        }, 400);
+    }
+    
+    // Remover do array
+    activeNotifications.splice(index, 1);
+}
+
+// Função para remover a notificação mais antiga
+function removeOldestNotification() {
+    if (activeNotifications.length > 0) {
+        removeNotification(activeNotifications[0].id);
+    }
+}
+
+// Função para limpar todas as notificações
+function clearAllNotifications() {
+    // Limpar timeout de nova notificação
+    if (notificationTimeout) {
+        clearTimeout(notificationTimeout);
+        notificationTimeout = null;
+    }
+    
+    // Remover todas as notificações ativas
+    [...activeNotifications].forEach(notification => {
+        removeNotification(notification.id);
+    });
 }
 
 function closeProduct() {
     modal.classList.remove("show");
     if (smoother) smoother.paused(false);
     
-    // Limpar timeout da notificação
+    // Limpar timeout inicial da notificação (antes de aparecer)
+    // mas NÃO limpar as notificações ativas - elas continuam independentes
     if (notificationTimeout) {
         clearTimeout(notificationTimeout);
         notificationTimeout = null;
     }
+    // As notificações desaparecem sozinhas após 10 segundos
 }
 
 // 7. LÓGICA DO UPSELL (FUNIL DE VENDAS)

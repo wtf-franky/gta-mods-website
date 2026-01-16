@@ -1,0 +1,20 @@
+{
+  "short_name": "LS Boost",
+  "name": "LS Boost | Serviços GTA V PC",
+  "icons": [
+    {
+      "src": "./images/website-images/icons/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/website-images/icons/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "https://wtf-franky.github.io/gta-mods-website/",
+  "display": "standalone",
+  "theme_color": "white",
+  "background_color": "black"
+}

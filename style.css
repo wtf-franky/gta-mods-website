@@ -769,6 +769,231 @@ section {
     }
 }
 
+/* Modal Mobile - 768px */
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 95%;
+        max-height: 90vh;
+        overflow-y: auto;
+        margin: 5vh auto;
+    }
+    
+    .modal-layout {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .modal-left {
+        padding: 1.5rem;
+    }
+    
+    .modal-product-image {
+        height: 180px;
+    }
+    
+    .modal-guarantees-box {
+        padding: 1rem;
+    }
+    
+    .guarantees-title {
+        font-size: 0.9rem;
+    }
+    
+    .guarantee-item {
+        padding: 0.6rem 0;
+    }
+    
+    .guarantee-text {
+        font-size: 0.8rem;
+    }
+    
+    .trust-badges {
+        gap: 0.8rem;
+    }
+    
+    .trust-item {
+        padding: 0.6rem;
+    }
+    
+    .trust-text {
+        font-size: 0.7rem;
+    }
+    
+    .modal-right {
+        padding: 1.5rem;
+    }
+    
+    .modal-title {
+        font-size: 1.6rem;
+    }
+    
+    .modal-price {
+        font-size: 2rem;
+    }
+    
+    .modal-desc {
+        font-size: 0.85rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .modal-subtitle {
+        font-size: 1rem;
+    }
+    
+    .modal-features li {
+        font-size: 0.85rem;
+        padding: 0.5rem 0;
+    }
+    
+    .close-btn {
+        top: 10px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+    }
+    
+    .btn-buy {
+        padding: 0.8rem 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .btn-icon {
+        width: 35%;
+    }
+    
+    .payment-methods {
+        flex-wrap: wrap;
+    }
+    
+    .pay-icon {
+        padding: 0.5rem 0;
+        font-size: 0.8rem;
+    }
+    
+    .secure-note {
+        font-size: 0.75rem;
+    }
+}
+
+/* Modal Mobile - 480px (Small phones) */
+@media (max-width: 480px) {
+    .modal-content {
+        max-width: 98%;
+        margin: 2vh auto;
+        border-radius: 12px;
+    }
+    
+    .modal-left {
+        padding: 1rem;
+    }
+    
+    .modal-product-image {
+        height: 150px;
+    }
+    
+    .modal-badge {
+        font-size: 0.65rem;
+        padding: 4px 10px;
+    }
+    
+    .modal-guarantees-box {
+        padding: 0.8rem;
+    }
+    
+    .guarantee-item {
+        padding: 0.5rem 0;
+        gap: 0.5rem;
+    }
+    
+    .guarantee-icon {
+        font-size: 1.1rem;
+    }
+    
+    .guarantee-text {
+        font-size: 0.75rem;
+    }
+    
+    .trust-badges {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .modal-right {
+        padding: 1.2rem;
+    }
+    
+    .modal-header-section {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .modal-title {
+        font-size: 1.4rem;
+    }
+    
+    .price-label {
+        font-size: 0.65rem;
+    }
+    
+    .modal-price {
+        font-size: 1.8rem;
+    }
+    
+    .modal-desc {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+    
+    .modal-features-section {
+        margin-bottom: 1.5rem;
+    }
+    
+    .modal-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .modal-features {
+        gap: 0.5rem;
+    }
+    
+    .modal-features li {
+        font-size: 0.8rem;
+    }
+    
+    .modal-footer {
+        padding-top: 1.2rem;
+    }
+    
+    .payment-section {
+        margin-bottom: 1rem;
+    }
+    
+    .payment-label {
+        font-size: 0.8rem;
+    }
+    
+    .btn-buy {
+        padding: 0.7rem 0.8rem;
+        font-size: 0.85rem;
+        gap: 0.5rem;
+    }
+    
+    .btn-icon {
+        width: 30%;
+    }
+    
+    .btn-arrow {
+        font-size: 1.2rem;
+    }
+    
+    .secure-note {
+        font-size: 0.7rem;
+        margin-top: 0.8rem;
+    }
+}
+
 .modal-content-img {
     margin: auto;
     display: block;
@@ -1231,14 +1456,309 @@ footer p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem; }
     }
 }
 
+/* ==================================================
+   MOBILE RESPONSIVE - BREAKPOINT 768px
+   ================================================== */
 @media (max-width: 768px) {
-    .hero-section {flex-direction: column; text-align: center; padding-top: 120px; }
-    .hero-stats {justify-content: center; flex-wrap: wrap; }
-    .hero-visual {display: none; }
-    .navbar .nav-links {display: none; }
-    .proof-grid {grid-template-columns: 1fr; }
-    .steps-container {grid-template-columns: 1fr; }
-    .hero-content h1 {font-size: 2.5rem; }
+    /* Navbar Mobile */
+    .navbar {
+        padding: 1rem 4%;
+    }
+    
+    .navbar .nav-links {
+        display: none;
+    }
+    
+    .cta-btn-nav {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    /* Hero Section Mobile */
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 5% 50px 5%;
+        min-height: auto;
+    }
+    
+    .hero-visual {
+        display: none;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-stats .stat {
+        text-align: center;
+        min-width: 80px;
+    }
+    
+    .hero-stats h3 {
+        font-size: 1.4rem;
+    }
+    
+    .hero-stats span {
+        font-size: 0.7rem;
+    }
+    
+    .hero-btns {
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+    }
+    
+    .cta-btn-main,
+    .btn-secondary {
+        width: 100%;
+        padding: 0.9rem 1.5rem;
+        text-align: center;
+        font-size: 0.95rem;
+    }
+    
+    /* Products Section Mobile */
+    .products-section {
+        padding: 3rem 4%;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .product-card {
+        padding: 1.5rem;
+    }
+    
+    .badge {
+        font-size: 0.65rem;
+        padding: 3px 8px;
+        top: -10px;
+        right: 15px;
+    }
+    
+    .card-header h3 {
+        font-size: 1.3rem;
+    }
+    
+    .price {
+        font-size: 1.3rem;
+    }
+    
+    .product-image-container {
+        height: 160px;
+    }
+    
+    .features li {
+        font-size: 0.85rem;
+    }
+    
+    /* Testimonials Mobile */
+    .testimonials-section {
+        padding: 3rem 4%;
+    }
+    
+    .proof-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .proof-card {
+        padding: 1rem;
+    }
+    
+    .proof-img-container {
+        height: 180px;
+    }
+    
+    .user-info h4 {
+        font-size: 1rem;
+    }
+    
+    .pack-badge {
+        font-size: 0.7rem;
+    }
+    
+    .proof-comment {
+        font-size: 0.85rem;
+    }
+    
+    /* Last Orders Section Mobile */
+    .last-orders-section {
+        padding: 3rem 4%;
+    }
+
+    /* FAQ Section Mobile */
+    .faq-section {
+        padding: 3rem 4%;
+    }
+    
+    .faq-question {
+        padding: 1.2rem;
+    }
+    
+    .faq-question h3 {
+        font-size: 0.95rem;
+        padding-right: 1rem;
+    }
+    
+    .faq-icon {
+        font-size: 1.3rem;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 1.2rem 1.2rem 1.2rem;
+    }
+    
+    .faq-answer p {
+        font-size: 0.9rem;
+    }
+    
+    /* How It Works Section Mobile */
+    .how-it-works-section {
+        padding: 3rem 4%;
+    }
+    
+    .steps-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .step-item {
+        padding: 1.5rem;
+    }
+    
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .step-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .step-content p {
+        font-size: 0.85rem;
+    }
+    
+    .cta-btn-final {
+        padding: 0.9rem 1.5rem;
+        font-size: 0.9rem;
+        margin: 2rem auto 0 auto;
+    }
+    
+    /* Footer Mobile */
+    footer {
+        padding: 2rem 4%;
+    }
+    
+    footer p {
+        font-size: 0.8rem;
+    }
+    
+    .disclaimer {
+        font-size: 0.65rem;
+    }
+}
+
+/* ==================================================
+   MOBILE RESPONSIVE - BREAKPOINT 480px (Small phones)
+   ================================================== */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.8rem 3%;
+    }
+    
+    .logo {
+        font-size: 1.1rem;
+    }
+    
+    .cta-btn-nav {
+        padding: 0.35rem 0.6rem;
+        font-size: 0.7rem;
+    }
+    
+    .hero-section {
+        padding: 90px 4% 40px 4%;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.7rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.85rem;
+    }
+    
+    .hero-stats {
+        gap: 1rem;
+    }
+    
+    .hero-stats h3 {
+        font-size: 1.2rem;
+    }
+    
+    .hero-stats span {
+        font-size: 0.65rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .product-card {
+        padding: 1.2rem;
+    }
+    
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .product-image-container {
+        height: 140px;
+    }
+    
+    .faq-question h3 {
+        font-size: 0.85rem;
+    }
 }
 
 #smooth-content {
@@ -1251,28 +1771,38 @@ footer p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem; }
 /* ==================================================
    13. NOTIFICAÇÕES DO MODAL (TEMPO REAL)
    ================================================== */
-.modal-notification {
+#notification-container {
     position: fixed;
     bottom: 20px;
     left: 20px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    max-width: 320px;
+    pointer-events: none;
+}
+
+.modal-notification {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(20, 20, 20, 0.95));
     border: 1px solid rgba(0, 255, 136, 0.4);
     border-radius: 12px;
     padding: 12px 18px;
+    padding-bottom: 16px;
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    gap: 8px;
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateX(-100%);
     transition: all 0.4s ease;
-    z-index: 100;
-    max-width: 320px;
     box-shadow: 0 8px 30px rgba(0, 255, 136, 0.2);
+    overflow: hidden;
+    pointer-events: auto;
 }
 
 .modal-notification.show {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
 .modal-notification.kingpin-notification {
@@ -1283,6 +1813,12 @@ footer p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem; }
 .modal-notification.garage-notification {
     border-color: rgba(139, 0, 255, 0.5);
     box-shadow: 0 8px 30px rgba(139, 0, 255, 0.2);
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .notification-icon {
@@ -1316,14 +1852,44 @@ footer p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem; }
     color: #8b00ff;
 }
 
+/* Progress Bar da Notificação */
+.notification-progress-container {
+    width: 100%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.notification-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), #00bfff);
+    border-radius: 3px;
+    width: 100%;
+    transition: width 0.1s linear;
+}
+
+.modal-notification.kingpin-notification .notification-progress-bar {
+    background: linear-gradient(90deg, #ff0080, #ff8c00);
+}
+
+.modal-notification.garage-notification .notification-progress-bar {
+    background: linear-gradient(90deg, #8b00ff, #ff00ff);
+}
+
 /* Responsive Notification */
 @media (max-width: 768px) {
-    .modal-notification {
+    #notification-container {
         bottom: 10px;
         left: 10px;
         right: 10px;
         max-width: calc(100% - 20px);
+    }
+    
+    .modal-notification {
         padding: 10px 14px;
+        padding-bottom: 14px;
     }
     
     .notification-text {

@@ -13,8 +13,9 @@
       "type": "image/png"
     }
   ],
-  "start_url": "https://wtf-franky.github.io/gta-mods-website/",
+  "start_url": "https://lsboost.vercel.app/",
   "display": "standalone",
   "theme_color": "white",
   "background_color": "black"
+
 }
